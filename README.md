@@ -7,7 +7,8 @@ Team 1: Ciara, Ida, Julie and Karen
 ## User Stories
 Each role can do anything the roles below can do. 
 
-For example, management can do anything a librarian, academic and user can do. However a user can only do what a user can.
+For example, management can do anything a librarian and user can do. However a user can only do what a user can.
+
 ### Management 
 * As management, I want to know how many users are registered with the library so that I can assign budgets for the following year.
 * As management, I  want to be able to add specific roles to users so that I can set the permissions accordingly. 
@@ -18,7 +19,6 @@ For example, management can do anything a librarian, academic and user can do. H
 * As a librarian I want to know what specific books by an author are available so that I can help with a user’s enquiry.
 * As a librarian I want to know the location of a book so that I can find it when needed.
 * As a librarian I want to know how many copies of a book is in the library so that I can help with a user’s enquiry.
-
 
 ### User
 * As a user I want to find a book on a specific topic so that I can use it for my studies.
