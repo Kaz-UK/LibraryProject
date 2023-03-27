@@ -19,8 +19,6 @@ For example, management can do anything a librarian, academic and user can do. H
 * As a librarian I want to know the location of a book so that I can find it when needed.
 * As a librarian I want to know how many copies of a book is in the library so that I can help with a user’s enquiry.
 
-### Academic
-* As an academic I want to request a book to be made available in the library so that I can use it to teach.
 
 ### User
 * As a user I want to find a book on a specific topic so that I can use it for my studies.
