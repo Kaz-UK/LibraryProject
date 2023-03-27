@@ -119,7 +119,7 @@ BEGIN
 END //
 DELIMITER ;
 
-– Reserve a book
+-- Reserve a book
 DELIMITER //
 CREATE PROCEDURE ReserveBook(
 			IN _reservation_date date,
@@ -128,5 +128,13 @@ CREATE PROCEDURE ReserveBook(
 )
 BEGIN 
 	INSERT INTO reservations (reservation_date, user_id, copy_id) VALUES (_reservation_date, _user_id, _copy_id);
+END //
+DELIMITER ;
+
+-- -- Check Book Details
+DELIMITER //
+CREATE DEFINER=`root`@`localhost` PROCEDURE `check_book_details`()
+BEGIN
+SELECT title, author from book;
 END //
 DELIMITER ;
