@@ -134,6 +134,7 @@ BEGIN
 END //
 DELIMITER ;
 
+
 -- Check Book Details
 DELIMITER //
 CREATE DEFINER=`root`@`localhost` PROCEDURE `check_book_details`()
