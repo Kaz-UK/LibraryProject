@@ -23,6 +23,7 @@ class Contact(db.Model):
     first_line = db.Column(db.String(50), nullable=False)
     second_line = db.Column(db.String(10), nullable=True)
     city_town = db.Column(db.Integer, nullable=False)
+    postcode = db.Column(db.String(10), nullable=False)
     email_address = db.Column(db.Integer, nullable=True)
     phone_number = db.Column(db.Integer, nullable=True)
     persons = db.relationship('Person', backref='persons')
