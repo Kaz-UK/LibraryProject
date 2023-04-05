@@ -25,4 +25,3 @@ class Person(db.Model):
     user_role = db.Column(db.String(50), nullable=False)
     library_card = db.Column(db.Integer, nullable=True)
     contact_id = db.Column(db.Integer, db.ForeignKey('contact.contact_id'), nullable=True)
-
