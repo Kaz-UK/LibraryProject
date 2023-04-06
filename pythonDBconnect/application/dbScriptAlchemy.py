@@ -189,11 +189,9 @@ while library_application.lower() == "y":
             print(f"\tCopy ID: {user_loan.copy_id} -- Book title: {book_details.accession_id} -- "
                   f"Date due: {user_loan.date_due}")
 
-        result = session.query(Contact).all()
-
     # Add a user (insert into CONTACT, PERSON tables)
     if menu == "7":
-        print("ADD NEW USER")
+        print("\nAdd a new Library User")
         add_first_line = input("Address (first line): ")
         add_second_line = input("Address (second line):  ")
         add_city = input("City/Town: ")
