@@ -1,0 +1,22 @@
+/*CSS Files for the Library Application Project*/
+
+/*Font setup*/
+
+* {
+    font-family: 'Raleway', sans-serif;
+  }
+
+
+/*Colour setup*/
+
+body {
+    background-color: #D6FFCD;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .bg-body-tertiary {
+    background-color: #AEE8B6!important;
+}

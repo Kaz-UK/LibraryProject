@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+    <h1>Book Holdings</h1>
+        {% for book in books %}
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">Title: {{book.title}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Author: {{book.author}}</td>
+                </tr>
+                <tr>
+                <td>Publisher: {{book.publisher}}</td>
+                </tr>
+                <tr>
+                <td>Date: {{book.published_date}}</td>
+                </tr>
+                <tr>
+                <td>ISBN: {{book.isbn}}</td>
+                </tr>
+                <tr>
+                <td>Subject Heading: {{book.subject_heading}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        {% endfor %}
+        <br>
+        {{ message }}
+        <!--End book listing-->
+
+{% block footer_content %}
+{% endblock %}
+{% endblock %}

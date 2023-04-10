@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+     <h3>Search the catalogue</h3>
+        <br>
+        <p>To search the catalogue, please search for a title, author or subject heading.</p>
+        <p>Please enter your search terms below, and then select title, author or subject heading from the drop down menu to execute your search.</p>
+        <p>Search terms must be entered in the exact format that they appear on the catalogue.</p>
+        <br>
+
+    <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Search Options</button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Search by Title</a></li>
+              <li><a class="dropdown-item" href="search_author">Search by Author</a></li>
+              <li><a class="dropdown-item" href="#">Search by Subject Heading</a></li>
+            </ul>
+    </div>
+    <br>
+    <br>
+    <h3>Reports</h3>
+    <br>
+    <p>List of <a href="books">Resources</a></p>
+    <p>List of <a href="persons">Users</a></p>
+    <p>List of <a href="reservations">Reservations</a></p>
+    <br>
+    <br>
+    <br>
+{% block footer_content %}
+{% endblock %}
+
+{% endblock %}

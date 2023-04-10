@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+    <h1>Registered Users</h1>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">User ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Surname</th>
+                <th scope="col">User Role</th>
+              </tr>
+            </thead>
+            <tbody>
+            <div>
+            {% for user in persons %}
+            <tr>
+                <th scope="row">{{user.user_id}}</th>
+                <td>{{user.first_name}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.user_role}}</td>
+            </tr>
+            {% endfor %}
+            <br>
+            {{ message }}
+            </div>
+            </tbody>
+        </table>
+        <br>
+{% block footer_content %}
+{% endblock %}
+
+{% endblock %}
