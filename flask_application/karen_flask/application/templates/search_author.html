@@ -28,14 +28,15 @@
                 <tr>
                 <td>Subject Heading: {{book.subject_heading}}</td>
                 </tr>
-                {% for copy in copies %}
                 <tr>
-                <td>Classmark: {{copy.classmark}}</td>
+                <td>Copies:</td>
+                </tr>
+                {% for copy in book.copies %}
+                <tr>
+                <td>Copy ID: {{copy.copy_id}} -- Location: {{copy.location}} -- Classmark: {{copy.classmark}} -- Availability: {{copy.loan_status}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
-
-
 
         </table>
         {% endfor %}

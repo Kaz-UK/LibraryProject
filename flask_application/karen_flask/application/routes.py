@@ -66,7 +66,22 @@ def copies_from_title(title):
         return jsonify(book, copy_list)
 
 
-# This is not working, only returns copies for one book
+# # This is not working, only returns copies for one book
+# @app.route('/search_author', methods=['GET'])
+# def show_search_author():
+#     # Unable to collect search term from HTML form so entered here
+#     search_term = "Adams, Ruth"
+#     error = ""
+#     book_result = service.get_book_by_author(search_term)
+#     if len(book_result) == 0:
+#         error = "There are no books to display"
+#     # This does not collect copies for each book object
+#     for book in book_result:
+#         copy_result = service.get_copies(book.accession_id)
+#     return render_template('search_author.html', books=book_result, copies=copy_result, message=error)
+
+
+# This appears to be working, but unsure if this is correct use of OOP
 @app.route('/search_author', methods=['GET'])
 def show_search_author():
     # Unable to collect search term from HTML form so entered here
@@ -75,7 +90,11 @@ def show_search_author():
     book_result = service.get_book_by_author(search_term)
     if len(book_result) == 0:
         error = "There are no books to display"
-    # This does not collect copies for each book object
-    for book in book_result:
-        copy_result = service.get_copies(book.accession_id)
-    return render_template('search_author.html', books=book_result, copies=copy_result, message=error)
+    book_list = []
+    for row in book_result:
+        copy_details = service.get_copies(row.accession_id)
+        book_details = {"accession_id": row.accession_id, "author": row.author, "title": row.title,
+                        "publisher": row.publisher, "published_date": row.published_date, "isbn": row.isbn,
+                        "subject_heading": row.subject_heading, "copies": copy_details}
+        book_list.append(book_details)
+    return render_template('search_author.html', books=book_list, message=error)
