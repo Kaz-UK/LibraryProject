@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body_content %}
+
+    <h3>Loans</h3>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">User</th>
+                <th scope="col">Title</th>
+                <th scope="col">Date Issued</th>
+                <th scope="col">Due Date</th>
+                <th scope="col">Copy ID</th>
+              </tr>
+            </thead>
+            <tbody>
+            <div>
+            {% for loan in loans %}
+            <tr>
+                <td>{{loan.first_name}} {{loan.surname}}</td>
+                <td>{{loan.title}}</td>
+                <td>{{loan.date_issued}}</td>
+                <td>{{loan.date_due}}</td>
+                <td>{{loan.copy_id}}</td>
+            </tr>
+            {% endfor %}
+            <br>
+            {{ message }}
+            </div>
+            </tbody>
+        </table>
+        <br>
+{% block footer_content %}
+{% endblock %}
+
+{% endblock %}

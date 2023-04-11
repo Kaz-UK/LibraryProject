@@ -1,14 +1,15 @@
 {% extends "layout.html" %}
 {% block body_content %}
 
-    <h1>Registered Users</h1>
+    <h3>Registered Users</h3>
         <table class="table">
             <thead>
               <tr>
                 <th scope="col">User ID</th>
                 <th scope="col">First Name</th>
                 <th scope="col">Surname</th>
-                <th scope="col">User Role</th>
+                <th scope="col">Email</th>
+                <th scope="col">Library Card</th>
               </tr>
             </thead>
             <tbody>
@@ -18,7 +19,8 @@
                 <th scope="row">{{user.user_id}}</th>
                 <td>{{user.first_name}}</td>
                 <td>{{user.surname}}</td>
-                <td>{{user.user_role}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.library_card}}</td>
             </tr>
             {% endfor %}
             <br>

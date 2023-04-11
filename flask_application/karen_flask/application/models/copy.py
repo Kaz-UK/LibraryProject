@@ -17,3 +17,4 @@ class Copy(db.Model):
     loan_status = db.Column(db.Integer, nullable=False)
     accession_id = db.Column(db.Integer, db.ForeignKey('book.accession_id'), nullable=True)
     books = db.relationship('Book', back_populates='copies')
+    loans = db.relationship('Loan', back_populates='copies')

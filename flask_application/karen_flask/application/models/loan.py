@@ -9,6 +9,8 @@ class Loan(db.Model):
     date_issued: str
     date_due: str
     date_returned: str
+    user_id: int
+    copy_id: int
 
     loan_id = db.Column(db.Integer, primary_key=True)
     date_issued = db.Column(db.String(10), nullable=True)
@@ -16,3 +18,5 @@ class Loan(db.Model):
     date_returned = db.Column(db.String(10), nullable=True)
     user_id = db.Column(db.Integer, db.ForeignKey('person.user_id'), nullable=False)
     copy_id = db.Column(db.Integer, db.ForeignKey('copy.copy_id'), nullable=False)
+    persons = db.relationship('Person', back_populates="loans")
+    copies = db.relationship('Copy', back_populates="loans")

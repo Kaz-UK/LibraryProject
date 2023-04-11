@@ -11,6 +11,7 @@ class Person(db.Model):
     fine_balance: int
     user_role: str
     library_card: int
+    contact_id: int
 
     user_id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(50), nullable=True)
@@ -20,3 +21,4 @@ class Person(db.Model):
     library_card = db.Column(db.Integer, nullable=True)
     contact_id = db.Column(db.Integer, db.ForeignKey('contact.contact_id'), nullable=True)
     contacts = db.relationship('Contact', back_populates="persons")
+    loans = db.relationship('Loan', back_populates="persons")
